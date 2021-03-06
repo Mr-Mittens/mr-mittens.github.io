@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>git revert02</title>
+	<meta charset="utf-8">
+	<link rel="alternate" type="application/atom+xml" title="RSS Feed" href="../rss.xml">
+	<link rel="stylesheet" href="../style.css" >
+	<link rel="shortcut icon" href="../images/favicon.png">
+</head>
+<body>
+<div id="container">
+
+<header>
+<!-- <h1><a href="../">mr-mittens</a></h1> -->
+<h2></h2>
+</header>
+
+<article>
+<p>if just pushed a commit wrong into the repo and wanted to revert it back to its old state.</p>
+<p><strong>Steps to remove your commits</strong></p>
+<ul>
+<li>step 1</li>
+</ul>
+<hr />
+<p><strong>Examining the log of your commit</strong></p>
+<p><code>git log</code></p>
+<p>find the commit code of the push that you want to revert to</p>
+<ul>
+<li>step 2</li>
+</ul>
+<hr />
+<p><strong>Force push that commit as the new master</strong></p>
+<p><code>git push origin +12356789yy68:master</code></p>
+<p>remember to add the + as it represents a forced push.</p>
+<p><strong>If the problem isn’t solved and ends up with an error like</strong></p>
+<ul>
+<li>use git reset to undo things. then force push.</li>
+</ul>
+<p><code>git reset 123456789yy68 --hard</code></p>
+<p><code>git push origin -f</code></p>
+</article>
+<p><a href="https://mr-mittens.github.io">Go back</a></p>
+</div>
+</body>
+</html>

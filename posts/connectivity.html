@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>connectivity</title>
+	<meta charset="utf-8">
+	<link rel="alternate" type="application/atom+xml" title="RSS Feed" href="../rss.xml">
+	<link rel="stylesheet" href="../style.css" >
+	<link rel="shortcut icon" href="../images/favicon.png">
+</head>
+<body>
+<div id="container">
+
+<header>
+<!-- <h1><a href="../">mr-mittens</a></h1> -->
+<h2></h2>
+</header>
+
+<article>
+<h2 id="connecting-the-internetarch"></h2>
+<h2 id="section">[connecting the internet (arch)]</h2>
+<p>some of the basic commands used daily </p>
+<ul>
+<li>ethernet</li>
+</ul>
+<p>ethernet cable is detected automatically</p>
+<ul>
+<li>connecting wifi via :</li>
+</ul>
+<p><strong>iwd</strong></p>
+<pre><code>    &gt; iwctl
+
+    &gt; device list
+
+    &gt; station wlan0 scan
+
+    &gt; station wlan0 get-networks
+
+    &gt; station wlan0 connect SSID
+        (passphrase will be prompted)</code></pre>
+<h2 id="section-1">——————————————————————–</h2>
+<p>if your wifi drivers are a bit old or unable to connect via wifi try by</p>
+<p>conecting from usb thethering from mobile phone or other devices.</p>
+<p><strong>dhcpcd</strong></p>
+<ul>
+<li><p>cd into the following directory :</p>
+<pre><code>  &gt; cd /sys/class/net </code></pre></li>
+<li><p>and type :</p>
+<pre><code>  &gt; dhcpcd &lt;device_name&gt;</code></pre></li>
+</ul>
+<h2 id="section-2">———————————————————————</h2>
+<h2 id="nmcli-basic-commands">nmcli basic commands</h2>
+<p><strong>Connect a network</strong></p>
+<pre><code>    &gt; nmcli device wifi connect &lt;SSID&gt; password &lt;password&gt;</code></pre>
+<p><strong>Check if NetworkManager is running</strong></p>
+<pre><code>    &gt; nmcli -t -f RUNNING general</code></pre>
+<p><strong>To get a general status</strong></p>
+<pre><code>    &gt; nmcli general</code></pre>
+<p><strong>List all the available device</strong></p>
+<pre><code>    &gt; nmcli dev status</code></pre>
+<p><strong>List all the available connections</strong></p>
+<pre><code>    &gt; nmcli con show</code></pre>
+<h2 id="section-3">———————————————————————-</h2>
+</article>
+<p><a href="https://mr-mittens.github.io">Go back</a></p>
+</div>
+</body>
+</html>
